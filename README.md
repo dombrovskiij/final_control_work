@@ -25,3 +25,55 @@
 >["hello", "2", "world", ":-)"] -> ["2", ":-)"]<br/>
 >["1234", "1567", "-2", "computer science"] -> ["-2"]<br/>
 >["Russia", "Denmark", "Kazan"] -> []
+
+<br/>
+
+## Описание решения
+<br/>
+Пишем программу состоящую из двух методов
+В первом методе задаём два массива строк, первый содержит строки с разной длиной, второй будет заполняться строками с длиной 3 символа
+
+<br/>
+
+```
+void GetArray(string[] array1, string[] array2)
+
+{
+
+    int count = 0;
+    for (int i = 0; i < array1.Length; i++)
+    {
+     if(array1[i].Length <= 3)
+        {
+            array2[count] = array1[i];
+            count++;
+        }
+    }
+}
+```
+
+### Вывод получившегося массива (второго):
+
+```
+void PrintArray(string[] array1, string[] array2)
+
+{
+    for (int i = 0; i < array2.Length; i++)
+    {
+        Console.Write($"{array2[i]}\t ");
+    }
+}
+```
+### Задаем два массива:
+```
+string[] arrayOne = new string[] {"hello", "2", "world", ":-)"};
+string[] resultOne = new string[arrayOne.Length];.
+```
+### Вызов метода
+```
+GetArray(arrayOne, resultOne);
+PrintArray(arrayOne, resultOne);
+```
+
+
+
